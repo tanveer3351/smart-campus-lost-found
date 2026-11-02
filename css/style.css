@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    padding: 10px;
+}
+
+.navbar {
+    height: 55px;
+    width: 90%;
+    background-color: rgba(47, 77, 108, 0.9);
+    margin: 0 auto;
+    border-radius: 10px;
+    border-top: 3.5px solid rgb(240, 165, 0);
+    padding: 12px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    padding: 3px;
+    height: 50px;
+    width: 20%;
+    align-items: center;
+
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 45px;
+    width: 120px;
+    border-radius: 10px;
+    margin-right: 10px;
+    
+}
+.logo-text:hover {
+     transform: scale(1.05);
+     cursor: pointer;
+}
+
+#uni {
+    color: rgb(240, 165, 0);
+}
+
+.lostfound {
+    color: white;
+}
+#report-icon {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: rgb(240, 165, 0);
+}
+#report-text {
+    color: black;
+    margin-left: 4px;
+}
+
+.navlinks {
+    height: 50px;
+    width:32%;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+ul li {
+    list-style: none;
+}
+ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+ul li a:hover {
+    color: rgb(240, 165, 0);
+}
+.navbright {
+    height: 50px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.navbtns {
+    width: 200px;
+     border-left: 5px rgb(199, 22, 22);
+}
+.btns {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+#login-btn {
+    background-color: rgba(47, 77, 108, 0.9);
+    border: none;
+    color: white;
+    width: 80px;
+    margin-right: 10px;
+}
+#register-btn {
+    background-color: white;
+    width: 100px;
+    border: none;
+
+}
