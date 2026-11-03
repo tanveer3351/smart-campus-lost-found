@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Campus Lost & Found System</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -21,10 +22,10 @@
 
             <div class="navlinks">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Lost Items</a></li>
-                    <li><a href="">Found Items</a></li>
-                    <li><a href="">About Us</a></li>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Lost Items</a></li>
+                    <li><a href="#">Found Items</a></li>
+                    <li><a href="#">About Us</a></li>
                 </ul>
             </div>
 
@@ -38,7 +39,7 @@
                         <path d="M12 5v14" />
                     </svg>
                     <!-- FontAwesome Class -->
-                    <i class="fa-solid fa-circle-plus"></i>
+                    <i class="fa-solid fa-circle-plus plus-icon"></i>
                     <h3 id="report-text">Report Items</h3>
                 </a>
 
@@ -49,6 +50,25 @@
             </div>
         </nav>
     </header>
+
+
+    <main class="main">
+        <section class="hero-section">
+            <div class="descriptionn">
+                <div id="title">
+                    <h1>Recover What <span id="matters">Matters.</span></h1>
+                </div>
+                <div id="para">
+                    <p>Lost something on campus? Our intelligent matching system connects lost and found reports
+                        automatically — helping SLIIT students recover their belongings faster than ever.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
 </body>
 
 </html>

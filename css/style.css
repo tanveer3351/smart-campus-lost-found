@@ -3,10 +3,19 @@
     padding: 0;
 }
 
+:root {
+  --golden: rgb(240, 165, 0);
+  --darkblue: rgba(47, 77, 108, 0.9);
+  --white : white;
+  --gray: rgb(208, 208, 208);
+}
+
 body {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -18,10 +27,10 @@ body {
 .navbar {
     height: 55px;
     width: 90%;
-    background-color: rgba(47, 77, 108, 0.9);
+    background-color: var(--darkblue);
     margin: 0 auto;
     border-radius: 10px;
-    border-top: 3.5px solid rgb(240, 165, 0);
+    border-top: 3.5px solid var(--golden);
     padding: 12px;
 
     display: flex;
@@ -44,7 +53,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     height: 45px;
     width: 120px;
     border-radius: 10px;
@@ -56,33 +65,35 @@ body {
      cursor: pointer;
 }
 
-#uni {
-    color: rgb(240, 165, 0);
+#uni,#matters {
+    color: var(--golden);
 }
 
 .lostfound {
-    color: white;
+    color: var(--gray);
 }
 #report-icon {
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 35px;
     width: 150px;
     border-radius: 10px;
     padding: 4px;
-    background-color: rgb(240, 165, 0);
+    background-color: var(--golden);
 }
 #report-text {
     color: black;
     margin-left: 4px;
+    font-weight: 700;
 }
 
 .navlinks {
-    height: 50px;
-    width:32%;
+    height: 45px;
+    width:34%;
     padding: 10px;
+    
 }
 
 ul {
@@ -91,27 +102,40 @@ ul {
 }
 ul li {
     list-style: none;
+    padding: 8px 10px;
+    transition: background-color 0.2s ease;
 }
+ul li:hover,
+ul li.active {
+    background-color: rgba(47, 77, 108, 0.9);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 ul li a {
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: var(--gray);
     font-weight: 500;
 }
-ul li a:hover {
-    color: rgb(240, 165, 0);
-}
+
+/* ul li a:hover {
+    color: var(--golden);
+} */
 .navbright {
     height: 50px;
     width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    
 }
 .navbtns {
     width: 200px;
-     border-left: 5px rgb(199, 22, 22);
+    /* border-left: 10px var(--gray);
+    margin-left: 3px; */
+    padding-left: 15px;
+    border-left: 1px solid var(--gray);
 }
 .btns {
     font-size: 18px;
@@ -124,11 +148,65 @@ ul li a:hover {
     border: none;
     color: white;
     width: 80px;
+    font-weight: 600;
     margin-right: 10px;
+    border: none;
 }
+#login-btn:hover {
+    background-color: rgba(58, 102, 147, 0.9);
+    cursor: pointer;
+}
+
 #register-btn {
     background-color: white;
     width: 100px;
     border: none;
+    font-weight: 600;
 
+}
+#register-btn:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#report-icon svg,.plus-icon {
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+#report-icon:hover svg, .plus-icon {
+    transform: rotate(180deg);
+}
+#report-icon:hover {
+    transform: scale(1.03);
+}
+
+
+.main {
+    min-width: 100vw;
+}
+/* Hero Section CSS */
+.hero-section {
+    width: 100%;
+    /* height: 570px; */
+    min-height: 80vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../hero-img.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   padding: 0 10%;
+
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   /* justify-content: center; */
+   z-index: -1;
+}
+
+/* #para {
+    width: 40%;
+} */
+#para p {
+    color: #555555; 
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
