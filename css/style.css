@@ -905,7 +905,6 @@ svg {
 .FAQ-container {
     width: 85%;
     margin: 0 auto;
-    /* gap: 10px; */
     padding: 20px 0;
     margin-bottom: 40px;
 }
@@ -1033,6 +1032,136 @@ svg {
     width: 100%;
     height: 4px;
     background-image: linear-gradient(to right, #F0A500, #008489, #F0A500);
+}
+
+.footer-links-section {
+    width: 100%;
+    min-height: 300px;
+    background-color: #1C2A59;
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
+    justify-content: center;
+    padding-left: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 60px;
+    /* column-gap: 20px; */
+}
+
+.system-logo>p {
+    color: rgb(211, 211, 211);
+    margin-top: 12px;
+    font-size: 15px;
+    padding-right: 30px;
+    line-height: 1.625;
+}
+
+
+/*.links-container .links-boxes ul li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+
+
+*/
+
+.logo-text h2 {
+    color: var(--darkblue);
+}
+
+#quick-links h4,
+#resources h4 {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--golden);
+    margin-bottom: 20px;
+}
+
+#quick-links ul,
+#resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#quick-links li,
+#resources li {
+    margin-bottom: 12px;
+}
+
+#quick-links a,
+#resources a {
+    color: #d1d5db;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+#quick-links a span,
+#resources a span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #008489;
+    transition: background-color 0.3s ease;
+}
+
+#quick-links a:hover,
+#resources a:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+#quick-links a:hover span,
+#resources a:hover span {
+    background-color: #F0A500;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-details h4 {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 3px;
+}
+
+.contact-details p {
+    color: #AAB7D0;
+    font-size: 14px;
+    margin: 0;
 }
 
 @media (max-width: 767px) {
