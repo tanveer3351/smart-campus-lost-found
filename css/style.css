@@ -37,7 +37,7 @@ body {
     padding: 12px;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 5;
 }
 
 .logo {
@@ -1036,7 +1036,7 @@ svg {
 
 .footer-links-section {
     width: 100%;
-    min-height: 300px;
+    min-height: 370px;
     background-color: #1C2A59;
 }
 
@@ -1075,13 +1075,14 @@ svg {
 }
 
 #quick-links h4,
-#resources h4 {
+#resources h4,
+.contact-info>h4 {
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--golden);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #quick-links ul,
@@ -1131,13 +1132,13 @@ svg {
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
 .contact-icon {
