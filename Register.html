@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="Style.css">
+    <!-- ADDED: FontAwesome for clean, short icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <!-- Top Logo -->
+        <div class="logo-box">
+            <i class="fa-solid fa-graduation-cap" style="color: #FFB703; font-size: 28px;"></i>
+        </div>
+
+        <h2>Create Account</h2>
+        <p class="subtitle">Join the Smart University Lost & Found System</p>
+
+        <div class="Login-page register-page">
+            <form>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label>FULL NAME <span class="required">*</span></label>
+                    <div class="input-group">
+                        <i class="fa-regular fa-user icon"></i>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                </div>
+
+                <!-- ID and Email -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>STUDENT ID <span class="required">*</span></label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-hashtag icon"></i>
+                            <input type="text" placeholder="IT23844292" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>EMAIL <span class="required">*</span></label>
+                        <div class="input-group">
+                            <i class="fa-regular fa-envelope icon"></i>
+                            <input type="email" placeholder="you@uni.edu" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty -->
+                <div class="form-group">
+                    <label>FACULTY <span class="required">*</span></label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-book-open icon"></i>
+                        <select required>
+                            <option value="" disabled selected hidden>Select your faculty</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="ba">Business Administration</option>
+                            <option value="cse">Computer System Engineering</option>
+                            <option value="math">Mathematics</option>
+                            <option value="edu">Education</option>
+                            <option value="media">Media and Communication</option>
+                            <option value="ee">Electrical Engineering</option>
+                            <option value="pe">Physical Education</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label>PHONE NUMBER (OPTIONAL)</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-phone icon"></i>
+                        <input type="tel" placeholder="0712345678">
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label>PASSWORD <span class="required">*</span></label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock icon"></i>
+                        <input type="password" placeholder="Min 8 characters" required>
+                        <i class="fa-regular fa-eye eye-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <button type="submit">
+                    <i class="fa-solid fa-user-plus"></i> CREATE ACCOUNT
+                </button>
+            </form>
+
+            <p class="bottom-text">
+                Already have an account? <a href="login.html">Sign In</a>
+            </p>
+        </div>
+
+        <div class="back-home">
+            <a href="#">← Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+/* --- Base Page Setup --- */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    color: white;
+    font-family: sans-serif;
+
+    background-image: url('campus.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark Overlay */
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(15, 17, 21, 0.75); 
+    z-index: -1;
+}
+
+/* --- Main Wrapper --- */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 20px; 
+    box-sizing: border-box;
+}
+
+/* --- Top Graduation Cap Box --- */
+.logo-box {
+    background-color: rgba(26, 28, 32, 0.8);
+    backdrop-filter: blur(5px);
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Text Outside the Box --- */
+h2 {
+    margin: 0 0 8px 0;
+    font-size: 32px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
+.subtitle {
+    margin: 0 0 30px 0;
+    color: #e2e8f0;
+    font-size: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- The Main Login Box --- */
+.Login-page {
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px); 
+    border-radius: 1.5rem; 
+    border: 1px solid rgba(255, 255, 255, 0.12); 
+    box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.1) 0px 1px 0px inset;
+    padding: 3rem 2.5rem; 
+    width: 440px;         
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- Input Containers --- */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    color: #94a3b8;
+    font-size: 16px; /* Added for FontAwesome icons */
+}
+
+/* --- Inputs --- */
+input {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05); 
+    color: white;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FFB703;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Button --- */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: #FFB703;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Only fades color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    box-shadow: 0 4px 10px rgba(255, 183, 3, 0.2);
+}
+
+button:hover {
+    background-color: #FCA311;
+    /* Removed transform so button doesn't move */
+}
+
+/* --- Icon Animation inside Button (Changed to 'i' for FontAwesome) --- */
+button i {
+    transition: transform 0.3s ease;
+}
+
+button:hover i {
+    transform: translateX(5px); /* Slides the icon right on hover */
+}
+
+/* --- Bottom Text and Links --- */
+.bottom-text {
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+a {
+    color: #FFB703;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================= */
+/* --- REGISTER PAGE SPECIFIC STYLES --- */
+/* ========================================= */
+
+/* Make the box wider for the registration form */
+.register-page {
+    width: 480px; 
+}
+
+/* Form Groups (Label + Input) */
+.form-group {
+    text-align: left; 
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.required {
+    color: #FFB703; 
+}
+
+/* Side-by-side columns for ID and Email */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1; 
+}
+
+/* Adjusting input padding for these specific fields */
+.register-page input {
+    padding: 14px 14px 14px 45px; 
+    font-size: 14px;
+}
+
+/* Customizing the Dropdown (Select) */
+select {
+    width: 100%;
+    padding: 14px 40px 14px 45px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    box-sizing: border-box;
+    font-size: 14px;
+    appearance: none; 
+    outline: none;
+    cursor: pointer;
+}
+
+select option {
+    background-color: #1a1c20;
+    color: white;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    pointer-events: none; 
+    font-size: 14px; /* Added for FontAwesome */
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.back-home {
+    margin-top: 20px;
+}
+
+.back-home a {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-home a:hover {
+    color: white;
+}
