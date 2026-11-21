@@ -1747,6 +1747,14 @@ h1 {
     .lostfound {
         max-width: 7rem;
     }
+    .copy-right-container p {
+        line-height: 1.5;
+    }
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.75rem 1rem;
+    }
 }
 
 @media (max-width: 380px) {
