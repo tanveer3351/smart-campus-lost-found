@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <!-- CHANGED: Pointing to style3.css -->
+    <link rel="stylesheet" href="css/style3.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-body">
+
+    <div class="main-wrapper">
+        
+        <!-- Top Logo -->
+        <div class="logo-box">
+            <i class="fa-solid fa-graduation-cap" style="color: #FFB703; font-size: 28px;"></i>
+        </div>
+
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Sign in to the Smart University Lost & Found System</p>
+
+        <!-- Login Box -->
+        <div class="Login-page">
+            <form>
+                <!-- User Input -->
+                <div class="input-group">
+                    <i class="fa-regular fa-user icon"></i>
+                    <input type="text" placeholder="Campus ID" name="campus_id" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="input-group">
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+
+                <!-- Button -->
+                <button type="submit">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    SIGN IN
+                </button>
+            </form>
+
+            <p class="bottom-text">
+                Don't have an account? <a href="Register.html">Register here</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
