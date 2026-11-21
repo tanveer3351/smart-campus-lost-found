@@ -1411,6 +1411,58 @@ h1 {
     margin: 0;
 }
 
+.copy-right-section {
+    width: 100%;
+    min-height: 64px;
+    background-color: #1C2A59;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.copy-right-container {
+    width: 90%;
+    min-height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.copy-right-container p,
+.legal-links a {
+    color: #AAB7D0;
+    font-size: 12px;
+}
+
+.copy-right-container p {
+    margin: 0;
+}
+
+.legal-links {
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.legal-links a {
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.legal-links a:hover {
+    color: #F0A500;
+}
+
+.institution-link {
+    color: #9DB1FF !important;
+    white-space: nowrap;
+}
+
+.institution-link span {
+    display: inline-block;
+    margin-left: 2px;
+}
+
 
 /* ============================ RESPONSIVE: TABLET ============================ */
 
@@ -1524,6 +1576,18 @@ h1 {
 @media (max-width: 768px) {
     #title h1 {
         white-space: normal;
+    }
+    .copy-right-container {
+        padding: 1rem 0;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    .legal-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
     }
     .summary-content,
     .working-boxes-container,
