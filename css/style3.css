@@ -1903,3 +1903,100 @@ h1 {
 .auth-body a:hover {
     text-decoration: underline;
 }
+
+
+/* ========================================= */
+/* --- REGISTER PAGE SPECIFIC STYLES --- */
+/* ========================================= */
+
+/* Make the box wider for the registration form */
+.register-page {
+    width: 480px; 
+}
+
+/* Form Groups (Label + Input) */
+.register-page .form-group {
+    text-align: left; 
+    margin-bottom: 18px;
+}
+
+.register-page .form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.register-page .required {
+    color: #FFB703; 
+}
+
+/* Side-by-side columns for ID and Email */
+.register-page .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.register-page .form-row .form-group {
+    flex: 1; 
+}
+
+/* Adjusting input padding for these specific fields */
+.register-page input {
+    padding: 14px 14px 14px 45px; 
+    font-size: 14px;
+}
+
+/* Customizing the Dropdown (Select) */
+/* SCOPED to register-page so it doesn't break homepage dropdowns */
+.register-page select {
+    width: 100%;
+    padding: 14px 40px 14px 45px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    box-sizing: border-box;
+    font-size: 14px;
+    appearance: none; 
+    outline: none;
+    cursor: pointer;
+}
+
+.register-page select option {
+    background-color: #1a1c20;
+    color: white;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    pointer-events: none; 
+    font-size: 14px; 
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.back-home {
+    margin-top: 20px;
+}
+
+.back-home a {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-home a:hover {
+    color: white;
+}
