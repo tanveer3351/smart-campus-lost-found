@@ -205,7 +205,7 @@ h1 {
     border-radius: 10px;
     background-color: var(--golden);
     white-space: nowrap;
-    transition: transform 300ms ease;
+    transition: transform 50ms ease;
 }
 
 #report-icon svg {
