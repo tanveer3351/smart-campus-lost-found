@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Items - Smart Campus Lost & Found</title>
+    <link rel="stylesheet" href="css/style3.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="found-items-page">
+    <!-- NAVIGATION BAR-->
+    <header class="site-header">
+        <div class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="brand">
+                    <div class="brand-logo">SIBA<span>UNI</span></div>
+                    <span class="brand-name">Lost & Found</span>
+                </a>
+
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="lost-items.html">Lost Items</a>
+                    <a href="found-items.html" class="active">Found Items</a>
+                    <a href="about.html">About Us</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <a href="report-item.html" class="report-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v8M8 12h8" />
+                        </svg>
+                        Report Item
+                    </a>
+
+                    <a href="login.html" class="login-link">Login</a>
+                    <a href="register.html" class="register-btn">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--HERO SECTION-->
+    <section class="page-hero">
+        <div class="hero-content">
+            <span class="hero-label"><i class="fa-solid fa-check-circle"></i>FOUND ITEMS</span>
+            <h1>Found Items Directory</h1>
+            <p>15 items turned in and awaiting their owners</p>
+        </div>
+    </section>
+
+
+    <!--MAIN CONTENT-->
+    <main class="main-content">
+        <!-- SEARCH AND FILTER SECTION -->
+        <section class="search-panel">
+            <div class="search-group">
+                <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search by keyword..." aria-label="Search by keyword">
+                </div>
+
+                <button class="filter-btn" type="button" aria-label="Search">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <div class="filter-input">
+                <select aria-label="Category">
+                    <option value="">All Categories</option>
+                    <option>Electronics</option>
+                    <option>Accessories</option>
+                    <option>Books</option>
+                    <option>Clothing</option>
+                    <option>Personal Items</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="filter-input">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="Filter by location..." aria-label="Filter by location">
+            </div>
+        </section>
+
+        <!-- INFORMATION BANNER -->
+        <section class="info-banner">
+            <i class="fa-regular fa-circle-check"></i>
+            <div class="info-content">
+                <h3>See your lost item here?</h3>
+                <p>Click on the item card and submit a claim with proof of ownership.
+                    Provide details like brand, color, identifying marks, or serial
+                    numbers to verify you are the rightful owner.</p>
+            </div>
+        </section>
+
+        <!--FOUND ITEMS SECTION-->
+        <section class="items-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">WAITING FOR OWNERS</span>
+                    <h2>Recently Found Items</h2>
+                    <p>Browse items reported by students and campus staff.</p>
+                </div>
+            </div>
+
+            <!-- ITEMS GRID -->
+            <div class="items-grid" id="items-grid">
+
+                <!-- ITEM 1: GAMING MOUSE -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/mouse.png" alt="Black gaming mouse">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Black gaming mouse</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 22 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 4 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 2: DELL POWER ADAPTER -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/laptop-charger.png" alt="Dell laptop power adapter">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge claimed">CLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Dell laptop power adapter</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 9 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 7 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 3: BLUETOOTH SPEAKER -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/speaker.png" alt="Black Bluetooth speaker">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Black SOWO Bluetooth Speaker</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 13 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 5 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 4: IPHONE -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/mobile.png" alt="Black iPhone 11">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Black iPhone 11</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 22 Apr 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 9 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 5: AIRPODS -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/air.png" alt="White wireless earbuds">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>White Wireless Earbuds</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 25 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 12 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 6: USB DRIVE -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/usb.png" alt="USB Flash Drive">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Grey USB Flash Drive</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 15 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 2 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 7: WATER BOTTLE -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/water-bottle.png" alt="Pink Water Bottle">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Pink Steel Water Bottle</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 18 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Personal Items</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 6 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 8: WRISTWATCH (Page 2 starts here) -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/wristwatch.png" alt="Silver wristwatch">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Silver Analog Wristwatch</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 20 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Accessories</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 8 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 9: NOTEBOOK -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/notebokk.png" alt="University notebook">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Spiral Notebook</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 19 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Books</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 3 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 10: CALCULATOR -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/calculator.png" alt="Scientific calculator">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Scientific Calculator</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 16 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 5 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 11: HEADPHONES (NEW) -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/headphones.png" alt="Over-ear headphones">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Over-Ear Headphones</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 11 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 14 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 12: WALLET (NEW) -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/wallet.png" alt="Leather wallet">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Brown Leather Wallet</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 10 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Personal Items</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 22 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 13: MOBILE ADAPTER (NEW) -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/mobileadapter.png" alt="Mobile charger adapter">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Mobile Charger Adapter</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 8 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 11 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 14: BOOK COVER (NEW) -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/cover.png" alt="Book cover">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Course Textbook</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 5 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Books</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 4 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 15: REPEAT ITEM (Page 3 starts here) -->
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="images/mouse.png" alt="Black gaming mouse">
+                        <span class="status-badge"><i class="fa-solid fa-box"></i> FOUND</span>
+                        <span class="claim-badge">UNCLAIMED</span>
+                        <span class="hidden-badge"><i class="fa-solid fa-lock"></i> Hidden</span>
+                    </div>
+                    <div class="item-details">
+                        <h3>Black gaming mouse (Repeat)</h3>
+                        <p class="hidden-description"><i class="fa-solid fa-lock"></i> Description hidden for security</p>
+                        <div class="item-meta">
+                            <p><i class="fa-solid fa-location-dot"></i> Location hidden</p>
+                            <p><i class="fa-regular fa-calendar"></i> 22 Jun 2026</p>
+                            <p><i class="fa-solid fa-tag"></i> Electronics</p>
+                        </div>
+                        <div class="card-footer">
+                            <span><i class="fa-regular fa-eye"></i> 4 views</span>
+                            <a href="#" class="details-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <!-- End of items-grid -->
+
+            <!-- PAGINATION -->
+            <div class="pagination-container">
+                <div class="pagination-box">
+                    <button class="page-btn" id="prev-btn" aria-label="Previous Page">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <span class="page-info" id="page-info">Page 1 of 3</span>
+                    <button class="page-btn" id="next-btn" aria-label="Next Page">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!--LOST ITEM HELP CARD-->
+        <section class="lost-help">
+            <h3>
+                <i class="fa-regular fa-circle-question"></i>
+                Lost something recently?
+            </h3>
+
+            <p>
+                If you've lost an item on campus, submit a report in the Lost Items
+                directory. Our AI will continuously scan for matching found items
+                and notify you instantly when a potential match is found.
+            </p>
+
+            <a href="lost-items.html">
+                Browse Lost Items
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+    </main>
+
+
+    <!-- FOOTER-->
+    <footer>
+        <section class="footer-links-section">
+            <div class="links-container">
+                <div class="links-boxes" id="system-details">
+                    <div class="system-logo">
+                        <div class="logo-text">
+                            <h2>SIBA<span id="uni">UNI</span></h2>
+                        </div>
+                        <p>
+                            The Smart Campus Lost & Found System an AI-powered platform helping SIBAU students recover
+                            their belongings quickly and safely.
+                        </p>
+                    </div>
+                </div>
+                <div class="links-boxes" id="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/"><span></span> Home</a></li>
+                        <li><a href="/lost-items"><span></span> Lost Items</a></li>
+                        <li><a href="/found-items"><span></span> Found Items</a></li>
+                        <li><a href="/about"><span></span> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="links-boxes" id="resources">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#"><span></span> How to Claim an Item</a></li>
+                        <li><a href="#"><span></span> How to Claim an Item Report Guidelines</a></li>
+                        <li><a href="#"><span></span> AI Matching System</a></li>
+                        <li><a href="#"><span></span> Student Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-info">
+                    <h4>Lost & Found Office</h4>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F0A500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Knowledge center, 1st Floor</h4>
+                            <p>SIBAU Main Campus</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0A500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 2" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Mon - Fri: 9:00 AM - 5:00 PM</h4>
+                            <p>Closed on public holidays</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0A500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>info@iba-suk.edu.pk</h4>
+                            <p>We respond within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0A500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3 a2 2 0 0 1 2 1.72 c.12.96.36 1.9.7 2.8 a2 2 0 0 1-.45 2.11L8.09 9.91 a16 16 0 0 0 6 6l1.27-1.27 a2 2 0 0 1 2.11-.45 c.9.34 1.84.58 2.8.7 A2 2 0 0 1 22 16.92Z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4> 071-5644000-05</h4>
+                            <p>Ext: 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copy-right-section">
+            <div class="copy-right-container">
+                <p>&copy; 2026 SIBAU UNI &ndash; Sukkur Institute of Business Administration University. All rights reserved.</p>
+                <nav class="legal-links" aria-label="Legal links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#" class="institution-link">SIBAU UNI <span aria-hidden="true">&#8599;</span></a>
+                </nav>
+            </div>
+        </section>
+    </footer>
+
+    <!-- JAVASCRIPT FOR PAGINATION -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('.item-card');
+            // Set to 7 so 15 items perfectly split into 7, 7, and 1
+            const itemsPerPage = 7; 
+            const totalPages = Math.ceil(items.length / itemsPerPage);
+            let currentPage = 1;
+
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const pageInfo = document.getElementById('page-info');
+
+            function updatePage() {
+                // Update Page Text
+                pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+                // Show/Hide items based on currentPage
+                items.forEach((item, index) => {
+                    if (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) {
+                        item.classList.remove('hide-item');
+                    } else {
+                        item.classList.add('hide-item');
+                    }
+                });
+
+                // Disable/Enable buttons
+                prevBtn.disabled = currentPage === 1;
+                nextBtn.disabled = currentPage === totalPages;
+            }
+
+            // Previous Button Click
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updatePage();
+                    // Scroll to top of grid smoothly
+                    document.getElementById('items-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            // Next Button Click
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updatePage();
+                    // Scroll to top of grid smoothly
+                    document.getElementById('items-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            // Initialize Page 1
+            updatePage();
+        });
+    </script>
+</body>
+
+</html>

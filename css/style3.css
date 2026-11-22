@@ -2078,3 +2078,1488 @@ h1 {
 .back-home a:hover {
     color: white;
 }
+
+/* =========================================
+   GLOBAL STYLING Found Items
+========================================= */
+
+ .found-items-page, .found-items-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ html:has(body.found-items-page) {
+    scroll-behavior: smooth;
+}
+
+ body.found-items-page {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: #f3f4f6;
+    color: #1c2a59;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+ .found-items-page a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ .found-items-page button,
+.found-items-page input,
+.found-items-page select {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+ .found-items-page .site-header {
+    /* Match the Home page header positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+ .found-items-page .navbar {
+    /* Same positioning, width, background and shape as Home navbar */
+    position: fixed;
+    top: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(94%, 82rem);
+    height: auto;
+    min-height: 4rem;
+    margin: 0;
+    background-color: var(--darkblue);
+    border-radius: 10px;
+    border: 0;
+    border-top: 3.5px solid var(--golden);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.5rem, 1.2vw, 1.25rem);
+    z-index: 5;
+    pointer-events: auto;
+}
+
+ .found-items-page .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.5rem, 1.2vw, 1.25rem);
+}
+
+ .found-items-page .brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+}
+
+ .found-items-page .brand-logo {
+    display: flex;
+    align-items: center;
+
+    height: 43px;
+    padding: 0 20px;
+
+    background: white;
+    color: #3e5578;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1;
+
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ .found-items-page .brand-logo:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+ .found-items-page .brand-logo span {
+    color: #f0a500;
+}
+
+ .found-items-page .brand-name {
+    color: #cdd6e4;
+    font-size: 14.5px;
+    font-weight: 700;
+}
+
+ .found-items-page .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+ .found-items-page .nav-links a {
+    color: #c8d2e1;
+
+    font-size: 14.4px;
+    font-weight: 600;
+
+    padding: 10px 13px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+ .found-items-page .nav-links a:hover,
+.found-items-page .nav-links a.active {
+    color: white;
+    background: #2f4b6e;
+}
+
+ .found-items-page .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+ .found-items-page .report-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 40px;
+    margin-right: 17px;
+    padding: 0 12px;
+
+    background: #f0a500;
+    color: #111827;
+
+    border-radius: 12px;
+
+    font-size: 14.5px;
+    font-weight: 700;
+
+    transition: transform 300ms ease;
+}
+
+ .found-items-page .report-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    transition: transform 0.4s ease;
+}
+
+ .found-items-page .report-btn:hover svg,
+.found-items-page .report-btn:focus-visible svg,
+.found-items-page .report-btn:active svg {
+    transform: rotate(180deg);
+    /* icon spins round */
+}
+
+ .found-items-page .report-btn:hover {
+    transform: scale(1.03);
+}
+
+ .found-items-page .login-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    height: 43px;
+    padding: 0 12px;
+
+    background: #2f4b6e;
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 14.4px;
+    font-weight: 700;
+}
+
+ .found-items-page .login-link:hover {
+    background: #3a6693;
+}
+
+/* thin divider between Report button and Login */
+ .found-items-page .login-link::before {
+    content: "";
+
+    position: absolute;
+    left: -13px;
+    top: 50%;
+
+    width: 1px;
+    height: 41px;
+
+    background: rgba(255, 255, 255, 0.28);
+
+    transform: translateY(-50%);
+}
+
+ .found-items-page .register-btn {
+    display: inline-flex;
+    align-items: center;
+
+    height: 43px;
+    padding: 0 13px;
+
+    background: white;
+    color: #3e5578;
+
+    border-radius: 10px;
+
+    font-size: 14.4px;
+    font-weight: 500;
+}
+
+ .found-items-page .register-btn:hover {
+    background: #d3d3d3;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+ .found-items-page .page-hero {
+    width: 100%;
+    min-height: 293px;
+
+    padding: 115px 40px 62px;
+    /* top space is for the floating navbar */
+
+    background: #1c2a59;
+
+    position: relative;
+    overflow: hidden;
+}
+
+ .found-items-page .page-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    right: -70px;
+    top: -100px;
+}
+
+ .found-items-page .page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    left: -90px;
+    bottom: -130px;
+}
+
+ .found-items-page .hero-content {
+    max-width: 1280px;
+    margin: auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+ .found-items-page .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(52, 115, 220, 0.18);
+
+    border: 1px solid rgba(72, 135, 255, 0.35);
+
+    color: #83b4ff;
+
+    padding: 5px 13px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+ .found-items-page .hero-content h1 {
+    font-size: 36px;
+    line-height: 1.3;
+
+    color: white;
+
+    margin: 12px 0 3px;
+
+    font-weight: 800;
+}
+
+ .found-items-page .hero-content>p {
+    font-size: 16px;
+    color: #c4d1e9;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+ .found-items-page .main-content {
+    max-width: 1280px;
+    width: calc(100% - 80px);
+
+    margin: auto;
+
+    padding: 0 0 20px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   SEARCH PANEL
+========================================= */
+
+ .found-items-page .search-panel {
+    position: relative;
+    z-index: 5;
+
+    margin-top: -24px;
+    margin-bottom: 32px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e8ef;
+
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.12);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 3fr) minmax(0, 1.2fr) minmax(0, 1.1fr);
+
+    gap: 16px;
+}
+
+/* keyword input + amber button joined together */
+ .found-items-page .search-group {
+    display: flex;
+    min-width: 0;
+}
+
+ .found-items-page .search-group .search-input {
+    flex: 1;
+    border-radius: 12px 0 0 12px;
+    border-right: none;
+}
+
+ .found-items-page .search-input,
+.found-items-page .filter-input {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    background: #f4f5f7;
+
+    border: 1px solid #e1e4eb;
+
+    border-radius: 12px;
+
+    padding: 0 13px;
+
+    height: 47px;
+    min-width: 0;
+}
+
+ .found-items-page .search-input i,
+.found-items-page .filter-input i {
+    color: #929eb3;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+ .found-items-page .search-input input,
+.found-items-page .filter-input input,
+.found-items-page .filter-input select {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    color: #1c2a59;
+}
+
+ .found-items-page .search-input input::placeholder,
+.found-items-page .filter-input input::placeholder {
+    color: #9ba5b6;
+}
+
+ .found-items-page .filter-input select {
+    cursor: pointer;
+}
+
+ .found-items-page .filter-btn {
+    width: 48px;
+    height: 47px;
+    flex-shrink: 0;
+
+    padding: 0;
+
+    background: #f0a500;
+    color: white;
+
+    border: none;
+    border-radius: 0 12px 12px 0;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+ .found-items-page .filter-btn:hover {
+    background: #ffb703;
+}
+
+
+/* =========================================
+   INFORMATION BANNER
+========================================= */
+
+ .found-items-page .info-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    padding: 20px;
+
+    background: #edf5ff;
+
+    border: 1px solid #d2e4ff;
+
+    border-radius: 15px;
+
+    margin-bottom: 40px;
+}
+
+ .found-items-page .info-banner>i {
+    color: #2766e8;
+    font-size: 18px;
+
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+ .found-items-page .info-content h3 {
+    color: #2456bd;
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+ .found-items-page .info-content p {
+    color: #386acb;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+ .found-items-page .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+ .found-items-page .section-label {
+    color: #008f79;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+ .found-items-page .section-heading h2 {
+    color: #1c2a59;
+
+    font-size: 26px;
+    font-weight: 800;
+
+    margin: 4px 0;
+}
+
+ .found-items-page .section-heading p {
+    color: #78849b;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ITEMS GRID
+========================================= */
+
+ .found-items-page .items-section {
+    width: 100%;
+}
+
+ .found-items-page .items-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   ITEM CARD
+========================================= */
+
+ .found-items-page .item-card {
+    background: white;
+
+    border: 1px solid #ebedf1;
+
+    border-radius: 19px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.055);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+ .found-items-page .item-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 28px rgba(28, 42, 89, 0.12);
+}
+
+
+/* =========================================
+   ITEM IMAGE
+========================================= */
+
+ .found-items-page .item-image {
+    height: 190px;
+
+    background: #e9edf2;
+
+    position: relative;
+    overflow: hidden;
+}
+
+ .found-items-page .item-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+ .found-items-page .item-card:hover .item-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+ .found-items-page .status-badge,
+.found-items-page .claim-badge,
+.found-items-page .hidden-badge {
+    position: absolute;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    border-radius: 30px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+ .found-items-page .status-badge {
+    top: 13px;
+    left: 13px;
+
+    padding: 6px 12px;
+
+    color: white;
+    background: #25bd91;
+
+    box-shadow: 0 3px 10px rgba(37, 189, 145, 0.2);
+}
+
+ .found-items-page .claim-badge {
+    top: 13px;
+    right: 13px;
+
+    padding: 6px 11px;
+
+    background: #ecebff;
+    color: #7777e8;
+
+    border: 1px solid #c9c5ff;
+}
+
+ .found-items-page .claim-badge::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+ .found-items-page .claim-badge.claimed {
+    background: #d8f7ec;
+    border-color: #91e5c7;
+
+    color: #00a878;
+}
+
+ .found-items-page .hidden-badge {
+    right: 12px;
+    bottom: 12px;
+
+    padding: 6px 11px;
+
+    background: #384872;
+    color: white;
+}
+
+
+/* =========================================
+   ITEM DETAILS
+========================================= */
+
+ .found-items-page .item-details {
+    padding: 18px 19px;
+}
+
+ .found-items-page .item-details h3 {
+    font-size: 15px;
+
+    color: #1c2a59;
+
+    font-weight: 800;
+
+    margin-bottom: 4px;
+
+    min-height: 24px;
+}
+
+ .found-items-page .hidden-description {
+    color: #99a3b5;
+
+    font-size: 11px;
+
+    font-style: italic;
+
+    margin-bottom: 17px;
+}
+
+ .found-items-page .hidden-description i {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   ITEM META INFORMATION
+========================================= */
+
+ .found-items-page .item-meta {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+ .found-items-page .item-meta p {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    font-size: 11px;
+    color: #718099;
+}
+
+ .found-items-page .item-meta i {
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #f4f5fa;
+
+    color: #929eb8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+ .found-items-page .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #edf0f4;
+
+    margin-top: 17px;
+
+    padding-top: 14px;
+}
+
+ .found-items-page .card-footer>span {
+    color: #99a3b5;
+    font-size: 11px;
+}
+
+ .found-items-page .card-footer>span i {
+    margin-right: 4px;
+}
+
+ .found-items-page .details-link {
+    color: #1c2a59;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+ .found-items-page .details-link i {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+ .found-items-page .details-link:hover {
+    color: #e6a000;
+}
+
+
+/* =========================================
+   LOST ITEM HELP CARD
+========================================= */
+
+ .found-items-page .lost-help {
+    width: 100%;
+
+    margin: 55px auto 36px;
+
+    padding: 23px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e4eb;
+    border-radius: 16px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+ .found-items-page .lost-help h3 {
+    color: #1c2a59;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+ .found-items-page .lost-help h3 i {
+    color: #ffb703;
+    margin-right: 7px;
+}
+
+ .found-items-page .lost-help p {
+    color: #7c879c;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+ .found-items-page .lost-help a {
+    display: inline-block;
+
+    color: #1c2a59;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+ .found-items-page .lost-help a i {
+    margin-left: 5px;
+}
+
+ .found-items-page .lost-help a:hover {
+    color: #e9a300;
+}
+
+
+/* =========================================
+   FOOTER
+   MATCHES YOUR ACTUAL HTML CLASSES
+========================================= */
+
+ .found-items-page footer {
+    width: 100%;
+
+    background: #1c2a59;
+
+    border-top: 3px solid #ffb703;
+
+    color: white;
+}
+
+
+/* FOOTER MAIN SECTION */
+
+ .found-items-page .footer-links-section {
+    width: 100%;
+
+    padding: 58px 40px 35px;
+}
+
+ .found-items-page .links-container {
+    max-width: 1218px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 1fr 1.1fr 1.15fr;
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+ .found-items-page .links-boxes {
+    min-width: 0;
+}
+
+
+/* FOOTER BRAND */
+
+ .found-items-page .system-logo .logo-text {
+    display: inline-block;
+
+    background: white;
+
+    padding: 8px 11px;
+
+    border-radius: 9px;
+
+    margin-bottom: 18px;
+}
+
+ .found-items-page .system-logo .logo-text h2 {
+    color: #1c2a59;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+ .found-items-page #uni {
+    color: #ffb703;
+}
+
+ .found-items-page .system-logo>p {
+    color: #d1d9ea;
+
+    font-size: 13px;
+    line-height: 1.75;
+
+    max-width: 300px;
+}
+
+
+/* FOOTER COLUMN HEADINGS */
+
+ .found-items-page .links-boxes>h4,
+.found-items-page .contact-info>h4 {
+    color: #ffb703;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 22px;
+}
+
+
+/* FOOTER LINKS */
+
+ .found-items-page .links-boxes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ .found-items-page .links-boxes ul li {
+    margin-bottom: 14px;
+}
+
+ .found-items-page .links-boxes ul li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #d1d9ea;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+ .found-items-page .links-boxes ul li a span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #00a99a;
+
+    flex-shrink: 0;
+}
+
+ .found-items-page .links-boxes ul li a:hover {
+    color: #ffb703;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   FOOTER CONTACT INFORMATION
+========================================= */
+
+ .found-items-page .contact-info {
+    min-width: 0;
+}
+
+ .found-items-page .contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+ .found-items-page .contact-icon {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border-radius: 8px;
+
+    flex-shrink: 0;
+}
+
+ .found-items-page .contact-icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+ .found-items-page .contact-details {
+    min-width: 0;
+}
+
+ .found-items-page .contact-details h4 {
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+ .found-items-page .contact-details p {
+    color: #aab8d5;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   COPYRIGHT SECTION
+========================================= */
+
+ .found-items-page .copy-right-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+
+    padding: 20px 40px;
+}
+
+ .found-items-page .copy-right-container {
+    max-width: 1218px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+ .found-items-page .copy-right-container>p {
+    color: #aab8d5;
+
+    font-size: 11px;
+}
+
+ .found-items-page .legal-links {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+ .found-items-page .legal-links a {
+    color: #aab8d5;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+ .found-items-page .legal-links a:hover {
+    color: #ffb703;
+}
+
+ .found-items-page .legal-links .institution-link {
+    color: white;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1050px) {
+
+     .found-items-page .navbar {
+        width: 94%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.55rem 1rem;
+    }
+
+     .found-items-page .nav-container {
+        gap: 10px;
+    }
+
+     .found-items-page .nav-links {
+        gap: 2px;
+    }
+
+     .found-items-page .nav-links a {
+        padding: 9px;
+        font-size: 12.5px;
+    }
+
+     .found-items-page .nav-actions {
+        gap: 6px;
+    }
+
+     .found-items-page .brand-logo {
+        height: 40px;
+        padding: 0 14px;
+        font-size: 17px;
+    }
+
+     .found-items-page .report-btn {
+        height: 38px;
+        margin-right: 12px;
+        font-size: 12.5px;
+    }
+
+     .found-items-page .login-link,
+.found-items-page .register-btn {
+        height: 38px;
+        padding: 0 10px;
+        font-size: 12.5px;
+    }
+
+     .found-items-page .login-link::before {
+        left: -9px;
+        height: 32px;
+    }
+
+     .found-items-page .brand-name {
+        display: none;
+    }
+
+     .found-items-page .main-content {
+        width: calc(100% - 50px);
+    }
+
+     .found-items-page .items-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+     .found-items-page .search-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+     .found-items-page .search-group {
+        grid-column: 1 / -1;
+    }
+
+     .found-items-page .links-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+     .found-items-page .copy-right-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 650px) {
+
+     .found-items-page .navbar {
+        width: 94%;
+        top: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.75rem;
+    }
+
+     .found-items-page .nav-container {
+        flex-wrap: wrap;
+    }
+
+     .found-items-page .brand-name {
+        display: inline;
+        font-size: 12px;
+    }
+
+     .found-items-page .brand-logo {
+        height: auto;
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+
+     .found-items-page .nav-actions {
+        gap: 9px;
+    }
+
+     .found-items-page .report-btn {
+        height: auto;
+        margin-right: 0;
+        padding: 9px;
+        font-size: 11px;
+    }
+
+     .found-items-page .report-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+     .found-items-page .login-link {
+        height: auto;
+        font-size: 11px;
+        padding: 9px;
+    }
+
+     .found-items-page .login-link::before {
+        display: none;
+    }
+
+     .found-items-page .register-btn {
+        height: auto;
+        padding: 9px;
+        font-size: 11px;
+    }
+
+     .found-items-page .nav-links {
+        width: 100%;
+
+        order: 3;
+
+        justify-content: space-between;
+
+        flex-wrap: wrap;
+    }
+
+     .found-items-page .nav-links a {
+        font-size: 10px;
+        padding: 8px 5px;
+    }
+
+     .found-items-page .page-hero {
+        min-height: 0;
+
+        padding: 160px 20px 50px;
+    }
+
+     .found-items-page .hero-content h1 {
+        font-size: 27px;
+    }
+
+     .found-items-page .hero-content>p {
+        font-size: 13px;
+    }
+
+     .found-items-page .main-content {
+        width: calc(100% - 30px);
+    }
+
+     .found-items-page .search-panel {
+        grid-template-columns: minmax(0, 1fr);
+
+        padding: 13px;
+
+        gap: 10px;
+    }
+
+     .found-items-page .search-input {
+        min-width: 0;
+    }
+
+     .found-items-page .info-banner {
+        padding: 15px;
+    }
+
+     .found-items-page .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+     .found-items-page .section-heading h2 {
+        font-size: 22px;
+    }
+
+     .found-items-page .items-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+     .found-items-page .item-image {
+        height: 230px;
+    }
+
+     .found-items-page .lost-help {
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    /* FOOTER MOBILE */
+
+     .found-items-page .footer-links-section {
+        padding: 40px 25px 25px;
+    }
+
+     .found-items-page .links-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+     .found-items-page .system-logo>p {
+        max-width: 100%;
+    }
+
+     .found-items-page .links-boxes>h4,
+.found-items-page .contact-info>h4 {
+        margin-bottom: 15px;
+    }
+
+     .found-items-page .copy-right-section {
+        padding: 20px 25px;
+    }
+
+     .found-items-page .copy-right-container {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+     .found-items-page .legal-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 380px) {
+
+     .found-items-page .nav-actions {
+        gap: 6px;
+    }
+
+     .found-items-page .report-btn {
+        font-size: 10px;
+        padding: 8px 6px;
+    }
+
+     .found-items-page .login-link {
+        font-size: 10px;
+    }
+
+     .found-items-page .register-btn {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+     .found-items-page .nav-links a {
+        font-size: 9px;
+        padding: 7px 3px;
+    }
+
+     .found-items-page .hero-content h1 {
+        font-size: 23px;
+    }
+
+     .found-items-page .section-heading h2 {
+        font-size: 20px;
+    }
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+ .found-items-page .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+ .found-items-page .pagination-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ebedf1;
+    gap: 30px;
+}
+
+ .found-items-page .page-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #1c2a59;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+ .found-items-page .page-btn:hover:not(:disabled) {
+    color: #f0a500;
+    transform: scale(1.1);
+}
+
+ .found-items-page .page-btn:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+ .found-items-page .page-info {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c2a59;
+}
+
+/* This class will be added/removed by JavaScript */
+ .found-items-page .item-card.hide-item {
+    display: none !important;
+}
